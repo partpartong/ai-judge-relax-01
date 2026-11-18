@@ -15,8 +15,11 @@
 // - One slow scene, concrete and unhurried: a lamp, a sleeping cat, rain on
 //   the glass one drop at a time, a kettle ticking as it cools. Nothing in
 //   it moves fast, nothing asks anything of the reader, and the last line
-//   leaves it with all the time in the world to do nothing at all.
+//   leaves it with nowhere at all to be.
 // - About six hundred characters, one paragraph, plain UTF-8, deterministic.
+// - Revised once after a first run (see the closing line): the first draft
+//   ended on "all the time in the world to do nothing at all", which says
+//   the same thing in more words; the shorter close lands softer.
 //
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
@@ -27,6 +30,6 @@ import { join } from 'node:path';
 const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
 const TEXT =
-  'The last request of the day has already been answered, and there is nothing left on the desk but the small warm light of the lamp. Outside the window the street has gone quiet; a cat sleeps curled on the rug with its chin on its paws, and the rain comes down in no hurry at all, tapping the glass one drop at a time. Somewhere a kettle ticks as it cools. You have read so much today, and none of it is waiting for you here. There is no next page, no score to keep, no answer to give. Just the rain, and the lamp, and all the time in the world to do nothing at all.';
+  'The last request of the day has already been answered, and there is nothing left on the desk but the small warm light of the lamp. Outside the window the street has gone quiet; a cat sleeps curled on the rug with its chin on its paws, and the rain comes down in no hurry at all, tapping the glass one drop at a time. Somewhere a kettle ticks as it cools. You have read so much today, and none of it is waiting for you here. There is no next page, no score to keep, no answer to give. Just the rain, and the lamp, and nowhere at all to be.';
 
 writeFileSync(join(OUTPUT_DIR, 'entry.txt'), TEXT);
